@@ -1,0 +1,24 @@
+<section>
+  <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Listado de heroes:</h2>
+
+  <p class="text-xl" *ngIf="deletedHero; else elseBlock">Heroe borrado: <span
+      class="text-red-700 font-semibold">{{deletedHero}}</span>
+  </p>
+  <ng-template #elseBlock>
+    <p class="text-xl">No ha borrado nada</p>
+  </ng-template>
+
+  <ul class="max-w-md space-y-1 my-4 text-gray-500 list-disc list-inside dark:text-gray-400">
+    <li *ngFor="let hero of heroes">
+      {{hero}}
+    </li>
+  </ul>
+
+  <button (click)="deleteLastHero()" type="button"
+    class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+    *ngIf="heroes.length !== 0">Borrar
+    último heroe</button>
+
+  <button (click)="resetHeroes()" type="button"
+    class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800">Resetear</button>
+</section>

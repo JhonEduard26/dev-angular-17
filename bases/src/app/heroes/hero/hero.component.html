@@ -1,0 +1,28 @@
+<section>
+  <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <a href="#">
+      <img class="rounded-t-lg"
+        src="https://images.pexels.com/photos/16763847/pexels-photo-16763847/free-photo-of-mujer-sentado-rubia-entretenimiento.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+        alt="" />
+    </a>
+    <div class="p-5">
+      <p class="mb-3 font-normal text-gray-900 dark:text-gray-400">Name: <span
+          class="font-bold text-2xl">{{name}}</span>
+      <p class="mb-3 font-normal text-gray-900 dark:text-gray-400">Edad: <span class="font-bold text-2xl">{{age}}</span>
+      <p class="mb-3 font-normal text-gray-900 dark:text-gray-400">Método: <span
+          class="font-bold text-2xl">{{getHeroDescription()}}</span>
+      <p class="mb-3 font-normal text-gray-900 dark:text-gray-400">Capitalizado: <span
+          class="font-bold text-2xl">{{capitalizedName}}</span>
+      </p>
+      <button (click)="changeName()" *ngIf="name !== 'batman'"
+        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        Cambiar nombre
+      </button>
+      <span class="inline-block mx-2"></span>
+      <button (click)="changeAge()" *ngIf="age !== 30"
+        class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+        Cambiar edad
+      </button>
+    </div>
+  </div>
+</section>
