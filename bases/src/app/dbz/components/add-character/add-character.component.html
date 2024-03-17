@@ -1,0 +1,8 @@
+<form class="flex flex-col gap-6 p-4" action="" (ngSubmit)="emitCharacter()">
+  <h2 class="text-2xl font-semibold tracking-tight">Agregar personaje</h2>
+  <input class="px-2 py-1 rounded-sm" [(ngModel)]="character.name" type="text" name="name" placeholder="Nombre">
+  <input class="px-2 py-1 rounded-sm" [(ngModel)]="character.power" type="number" name="power" placeholder="Poder">
+
+  <button class="px-4 py-2.5 rounded-md bg-emerald-700 text-white text-xl hover:bg-emerald-500"
+    type="submit">Enviar</button>
+</form>
