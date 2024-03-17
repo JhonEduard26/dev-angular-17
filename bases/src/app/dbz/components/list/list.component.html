@@ -1,9 +1,13 @@
 <ul>
-  <li class="p-2 rounded-sm" [ngClass]="{'bg-emerald-300': isFirst, 'bg-red-300': isLast}" *ngFor="
+  <li class="flex justify-between p-2 rounded-sm" [ngClass]="{'bg-emerald-300': isFirst, 'bg-red-300': isLast}" *ngFor="
   let character of characterList;
   let i = index;
   let isFirst = first;
   let isLast = last">
-    {{i + 1}}. {{character.name}} - <span class="font-semibold">Power: </span>{{character.power}}
+    <span>
+      {{i + 1}}. {{character.name}} - <span class="font-semibold">Power: </span>{{character.power}}
+    </span>
+
+    <button (click)="deleteCharacter(character.id)">❌</button>
   </li>
 </ul>
